@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Quote Verification Table</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f7f7;
+}
+
+.table-container {
+    overflow: auto;
+    max-height: 85vh;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+th {
+    background-color: #2f2f2f;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+th:hover {
+    background-color: #444;
+}
+
+th, td {
+    border: 1px solid #d0d0d0;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    max-width: 700px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e8f0ff;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>Quote Verification Table</h1>
+<div class="table-container">
+<table id="quoteTable">
+<tr><th onclick="sortTable(0)">Theme</th><th onclick="sortTable(1)">Subtheme</th><th onclick="sortTable(2)">Quote</th><th onclick="sortTable(3)">post_id</th><th onclick="sortTable(4)">found_in</th><th onclick="sortTable(5)">match_type</th><th onclick="sortTable(6)">source_title</th><th onclick="sortTable(8)">excerpt</th></tr>
+<tr><td>Theme 1: Mental Health Challenges and Stigma</td><td>Sub-theme 2: Depression and Anxiety</td><td>I have been battling with the VA a few times trying to get taken care of.</td><td>11z0uzh</td><td>selftext</td><td>Exact normalized selftext</td><td>help with va</td>
+
+<td>SELFTEXT: fellow vets <span class="highlight">i have been battling with the va a few times trying to get taken care of.</span>  1. i was in during desert storm, though in okinawa at the time. 2.</td></tr>
+<tr><td>Theme 1: Mental Health Challenges and Stigma</td><td>Sub-theme 1: PTSD and Trauma</td><td>I was ashamed to let the VA know about my depression.</td><td>1bv89jj</td><td>selftext</td><td>Exact normalized selftext</td><td>thanks for talking so honestly about your ptsd &amp; mh issues</td>
+
+<td>SELFTEXT: your frankness and honesty helped me call the va today to make an appointment and get to a better place between my ears. i've been on prozac (recently weaned off) and welbutrin for years, and it seems to have stopped working. <span class="highlight">i was ashamed to let the va know about my depression.</span> they knew about my anxiety issues, but i didn't want to get myself in trouble or on some list. i used to be a reasonably high-level handgun competitor (idpa, for those who know). i didn't want to lose my collection.</td></tr>
+<tr><td>Theme 1: Mental Health Challenges and Stigma</td><td>Sub-theme 2: Depression and Anxiety</td><td>I'm really close to blowing my fucking brains out, and just need to talk to somebody safely.</td><td>g9hr56</td><td>selftext</td><td>Exact normalized selftext</td><td>how can i speak to somebody without getting locked up?</td>
+
+<td>SELFTEXT: this time, i told them day 1 i felt better and they let me go is there a way to seek treatment, or just get somebody to talk to, without getting police involved? i have a lot to get out, and nobody to listen. i get that they need to make numbers, and as long as people day they feel better, their numbers look good, but <span class="highlight">i'm really close to blowing my fucking brains out, and just need to talk to somebody safely.</span>  i know i'm supposed to avoid using the 'key words' that make them call, but it's really hard to avoid words like 'blow my fucking brains out' and 'throw myself in front of a train' when those feelings are the thing im here to talk about</td></tr>
+<tr><td>Theme 1: Mental Health Challenges and Stigma</td><td>Sub-theme 1: PTSD and Trauma</td><td>I have suicidal thoughts every day and it's really ruining my relationship with my family and friends.</td><td>rwdrcy</td><td>selftext</td><td>Prefix substring match (difference of 'still')</td><td>what can i do to get an increase, possibly 100p&amp;t</td>
+
+<td>SELFTEXT: good evening, i'm looking to see if i can work something to get a higher percent because i feel like i need it actually. currently, i am listed for the following and it is totaling **80%**. \\- 70% (**service-connected**) **major depressive disorder, recurrent, moderate with anxious distress** \\- 10% (**service-connected**) **tinnitus** \\- 10% (**service-connected**) **lumbosacral strain** &amp;#x200b; for the first one i'm currently on 100mg of antidepressants (zoloft) and <span class="highlight">i still have suicidal thoughts every day and its really ruining my relationship with my family and friends</span> but especially my girlfriend who is trying her best to do what she can to help me. while taking zoloft it also causes my libido to lower and that is also affecting the relationship between my s/o. my doctor (non-va) has recommended me to get tested for adhd recently because i've told him that i have racing thoughts and that my mind constantly jumps from one thing to another causing me to not be able to focus on one task at a time.</td></tr>
+<tr><td>Theme 2: Barriers to Mental Health Support</td><td>Sub-theme 2: Fear of Repercussions</td><td>I'm afraid to speak to VA physiologist... I'm afraid to address it with someone at the VA.</td><td>xilftn</td><td>title+selftext</td><td>Ellipsis segment match</td><td><span class="highlight">i'm afraid to speak to va physiologist</span></td>
+
+<td>TITLE: <span class="highlight">i'm afraid to speak to va physiologist</span>
+
+SELFTEXT: i'm a combat vet , came home last year aside from yelling in my sleep when i sleep i did something and <span class="highlight">i'm afraid to address it with someone at the va.</span> a few nights ago my wife grabbed my arm and unconsciously while asleep  i put her in a choke hold fight or flight reaction i wasn't there. i went back to sleep and that was that i thought it was a dream later on i had to ask her if that happened and she confirmed. we are ok we love each other and our children i'm afraid to address it i feel that i would become a risk in the eyes of the va each time i've spoken to a doctor questioning wether or not i should bring it up then i'm asked the questions  'are you looking to hurt yourself or others and do you have weapon/guns in your house' absolutely not never could imagine hurting my family or  myself and while i was active never had an issue with a weapon and  don't see a problem with owning one when it's locked up.</td></tr>
+<tr><td>Theme 2: Barriers to Mental Health Support</td><td>Sub-theme 1: Systemic Issues within the VA</td><td>The VA is 'strategically incompetent'.</td><td>1indpn4</td><td>title</td><td>Exact loose title</td><td><span class="highlight">the va is 'strategically incompetent'</span></td>
+
+<td>TITLE: <span class="highlight">the va is 'strategically incompetent'</span></td></tr>
+<tr><td>Theme 2: Barriers to Mental Health Support</td><td>Sub-theme 1: Systemic Issues within the VA</td><td>I have been waiting since September for a mental health appointment at the VA.</td><td>1ixl187</td><td>selftext</td><td>Exact normalized selftext</td><td>i cannot stop thinking about killing myself.</td>
+
+<td>SELFTEXT: title says it all. <span class="highlight">i have been waiting since september for a mental health appointment at the va.</span> i have reached out to the vet center and nobody has called me back. i have called the patient advocates. i have done everything the va tells veterans to do when they are in crisis but i'm realizing that there is no help.</td></tr>
+<tr><td>Theme 2: Barriers to Mental Health Support</td><td>Sub-theme 2: Fear of Repercussions</td><td>I want to know if I can tell my doctor at the VA that I'm having suicidal thoughts without the risk of being committed or losing my gun rights.</td><td>8li560</td><td>selftext</td><td>Exact normalized selftext</td><td>can i keep my guns if i tell the va i have suicidal ideation?</td>
+
+<td>SELFTEXT: i care about my gun rights very much i would in fact die in order to keep them. i even moved to a my current state largely because it has strong gun rights. <span class="highlight">i want to know if i can tell my doctor at the va that i'm having suicidal thoughts without the risk of being committed or losing my gun rights.</span> if telling a doctor would put me at risk of losing my rights and one of the only things in life i care deeply about i'd just prefer to look ahead and push forward on my own.</td></tr>
+<tr><td>Theme 3: Coping Mechanisms and Support Systems</td><td>Sub-theme 2: Therapy and Professional Help</td><td>I finally reached out for help... I called the crisis hotline.</td><td>cjmxs3</td><td>title+selftext</td><td>Ellipsis segment match</td><td><span class="highlight">i finally reached out for help</span></td>
+
+<td>TITLE: <span class="highlight">i finally reached out for help</span>
+
+SELFTEXT: i have never been the type of dude who shared anything personal even with fellow vets, even the ones i was deployed with i just find it hard and don't want to appear weak. even posting this i don't feel comfortable with but i know it needs to be put out there and i need some kind of support system in place. saturday night <span class="highlight">i called the crisis hotline</span>. i finally had enough of everything it would seem and didn't feel too well. they got me an appointment setup for therapy later this week.</td></tr>
+<tr><td>Theme 3: Coping Mechanisms and Support Systems</td><td>Sub-theme 1: Physical Activity and Wellness</td><td>I love lifting weights and working out because it's where I feel the best.</td><td>rr167a</td><td>selftext</td><td>Exact loose selftext</td><td>how are you guys?</td>
+
+<td>SELFTEXT: i have a feeling that eventually one day i'm going to kill myself if i get drunk and i'm not careful. i don't drink by myself anymore and i'm not going to buy a gun even though i like them but pretty much out of fear. <span class="highlight">i love lifting weights and working out because it's where i feel the best</span> but recently my anxious feelings have creeped up on me while in the gym. i guess that's why i'm here now. i feel like i can't be the only one that feels like this and i was seeing if anyone had any advice.</td></tr>
+<tr><td>Theme 3: Coping Mechanisms and Support Systems</td><td>Sub-theme 2: Therapy and Professional Help</td><td>I have gone through years of therapy since then. I have gotten my life back together through a massive amount of work.</td><td>bbaluk</td><td>selftext</td><td>Exact normalized selftext</td><td>i'm at the va and a veteran just shot themselves in front of me</td>
+
+<td>SELFTEXT: so i didn't tell anyone he was suicidal. he shot himself in front of me. <span class="highlight">i have gone through years of therapy since then. i have gotten my life back together through a massive amount of work.</span> i'm still 100% disabled, but i made it out the other side. i regret every single day not helping my friend get better and not stopping him. the veteran dying today, it brought it all back.</td></tr>
+<tr><td>Theme 3: Coping Mechanisms and Support Systems</td><td>Sub-theme 3: Community and Personal Connections</td><td>I have a great wife of 33 years that has saved my life and supports me.</td><td>116rwu6</td><td>selftext</td><td>Prefix substring match (difference of 'do')</td><td>what to do about depression?</td>
+
+<td>SELFTEXT: i'm afraid i might get red flaged. i am nowhere close to suicidal. <span class="highlight">i do have a great wife of 33 years that has saved my life and supports me.</span>  the constant pain is wearing me down.</td></tr>
+<tr><td>Theme 4: Transition and Reintegration Challenges</td><td>Sub-theme 2: Adapting to Civilian Life</td><td>I'm just in this extremely weird spot where I'm just kind of sitting around all day waiting for fall to come around so I can go to school.</td><td>nm30f0</td><td>selftext</td><td>Exact loose selftext</td><td>in a very weird place at the moment</td>
+
+<td>SELFTEXT: if he gets the job then i'm stuck continuing looking for more housing, if he doesn't get it then he will still take on an apartment with me. can't really blame him, it's a really big opportunity for him. anyway since i've returned to my home of record <span class="highlight">i'm just in this extremely weird spot where i'm just kind of sitting around all day waiting for fall to come around so i can go to school</span>, i have a futon to sleep on, no real world skills gained through the military as i had a very non-real-world skill type of mos. i'm not really hurting for money at the moment either. i mostly just feel extremely lonely and anxious over what feels like no real reason.</td></tr>
+<tr><td>Theme 4: Transition and Reintegration Challenges</td><td>Sub-theme 2: Adapting to Civilian Life</td><td>I miss being around motivated guys day in day out.</td><td>4b1ofu</td><td>selftext</td><td>Exact normalized selftext</td><td>i'm having a lot of trouble with finding motivation to keep trying to live.</td>
+
+<td>SELFTEXT: i know i need to stop escaping reality and get a life, but i've wandered too far off path and am just lost. i don't miss the army, but i miss the lifestyle of never really having to worry about things. <span class="highlight">i miss being around motivated guys day in day out.</span> we knew who and what to avoid. things were black and white. now that i've been out for 2 years, i had to alienate my past to fit in with civilians.</td></tr>
+<tr><td>Theme 4: Transition and Reintegration Challenges</td><td>Sub-theme 1: Career Uncertainty and Identity Loss</td><td>I don't feel like I'm a veteran, and I really want to reenlist.</td><td>v6kdpu</td><td>title</td><td>Exact normalized title</td><td><span class="highlight">i don't feel like i'm a veteran, and i really want to reenlist.</span></td>
+
+<td>TITLE: <span class="highlight">i don't feel like i'm a veteran, and i really want to reenlist.</span></td></tr>
+<tr><td>Theme 4: Transition and Reintegration Challenges</td><td>Sub-theme 1: Career Uncertainty and Identity Loss</td><td>I have been having a very hard time transitioning.</td><td>vn22q6</td><td>selftext</td><td>Prefix substring match (difference of 'I')</td><td>i need help with my mental health</td>
+
+<td>SELFTEXT: hey there guys. so i eased early this year and <span class="highlight">have been having a very hard time transitioning.</span> i was an 0311 and did 4 years, got out as a terminal lance. i was pretty jaded about being in my last 2 years because i was not fond of the peacetime bullshit, and just wanted to get out and move on with life. i had to extend my contract a few months so i could deploy with my unit since it was scheduled a bit later into my contract.</td></tr>
+<tr><td>Theme 5: Institutional Critique and Reform</td><td>Sub-theme 2: Stigma and Mental Health System</td><td>Fuck the mental health system and the stigma of having any type of issue.</td><td>p9y9kv</td><td>selftext</td><td>Exact normalized selftext</td><td>my own worst enemy lives inside my head.</td>
+
+<td>SELFTEXT: but i swear i can escape all of this! i have had the police show up at my house because my mental health team was concerned, but instead of doing a welfare check, the police wanted to handcuff me and arrest me. <span class="highlight">fuck the mental health system and the stigma of having any type of issue.</span> one time, in particular, was because i mentioned that my past history i had committed suicide in 2018, and at that time it was mostly due to the amount of pain i was experiencing and i could not take it anymore, but just because i spoke of my past history..and compared my level of pain to the 2018 levels, bam! police show and my wife and i had to beg and persuade them to not arrest me or take me into custody. that i had no intentions or suicidal thoughts or of harming others.</td></tr>
+<tr><td>Theme 5: Institutional Critique and Reform</td><td>Sub-theme 1: Criticism of VA Practices</td><td>I believe there needs to be a VA but not this broken sack of shit.</td><td>ffc2v7</td><td>selftext</td><td>Exact normalized selftext</td><td>va judge remanding my case and what happens if the local va does not follow all the judges instructions?</td>
+
+<td>SELFTEXT: i want my life back and it seems the va is always in the way. i think i have just been silent and taken their shit when i should have been throwing punches. <span class="highlight">i believe there needs to be a va but not this broken sack of shit.</span>  and the fault of this lays on congress.... all  i know is that i do not trust the va for health care. its gotten really bad in that i need health care but that requires trust.</td></tr>
+<tr><td>Theme 5: Institutional Critique and Reform</td><td>Sub-theme 1: Criticism of VA Practices</td><td>The VA keeps switching providers on me, shoving pills down my throat and saying 'we'll see you in 2 months'.</td><td>98y2dk</td><td>selftext</td><td>Exact normalized selftext</td><td>what should i do?</td>
+
+<td>SELFTEXT: i started seeing a shrink right when i got out just to be safe, but it's not helping much. slowly the anger has turned into hardcore depression and suicidal thoughts, with a side of anxiety and panic attacks. <span class="highlight">the va keeps switching providers on me, shoving pills down my throat and saying 'we'll see you in 2 months'.</span> i still have yet to get a real diagnosis because every time i go in to see the shrink they act like they don't believe me. it's honestly a fucking joke. it's progressed to the point that i often day-dream about eating my gun.</td></tr>
+<tr><td>Theme 5: Institutional Critique and Reform</td><td>Sub-theme 2: Stigma and Mental Health System</td><td>The people who share 'support our troops' stuff on Facebook are liars.</td><td>uqms1p</td><td>title</td><td>Exact normalized title</td><td><span class="highlight">the people who share 'support our troops' stuff on facebook are liars.</span></td>
+
+<td>TITLE: <span class="highlight">the people who share 'support our troops' stuff on facebook are liars.</span></td></tr>
+<tr><td>Theme 6: Legal and Ethical Concerns</td><td>Sub-theme 2: Impact on Employment and Benefits</td><td>If I am admitted in this there any negative impact it can have on my benefits, my treatment plan, or where else they can admit me to?</td><td>1iipwlw</td><td>selftext</td><td>Exact normalized selftext</td><td>seeking advice for lack of urgency and interest in treatment, patient's advocacy advice.</td>
+
+<td>SELFTEXT: i am so light sensitive and having blurry vision in my right eye that i can hardly keep it open in daylight conditions. i have communicated these concerns over and over to multiple medical professionals in the va. **<span class="highlight">if i am admitted in this there any negative impact it can have on my benefits, my treatment plan, or where else they can admit me to?</span>** i am not sure if there is any justifiable concern regarding this but it just seems like a route i may honestly take as i continually worry of my condition. i was more generally concerned that i would be treated as a mental patient or something horribly unrelated to my condition. during this process i have no thoughts of harming myself or others!</td></tr>
+<tr><td>Theme 6: Legal and Ethical Concerns</td><td>Sub-theme 1: Firearm Ownership and Mental Health</td><td>If my friend admits to having suicidal ideations/desires, will that prevent him from owning a firearm?</td><td>tf9cv2</td><td>selftext</td><td>Exact normalized selftext</td><td>2a vs suicidal ideations?</td>
+
+<td>SELFTEXT: asking for a friend... <span class="highlight">if my friend admits to having suicidal ideations/desires, will that prevent him from owning a firearm?</span> especially if his career includes the daily carry of a firearm? he wants help, but can't afford to lose his career.</td></tr>
+<tr><td>Theme 6: Legal and Ethical Concerns</td><td>Sub-theme 1: Firearm Ownership and Mental Health</td><td>I'm a cop and I love guns. Will a rating affect either of these?</td><td>1inha31</td><td>selftext</td><td>Exact normalized selftext</td><td>can a mental health rating be used against me in any way? are there any risks?</td>
+
+<td>SELFTEXT: tldr: <span class="highlight">i'm a cop and i love guns. will a rating affect either of these?</span>  longer version. currently a leo with ambitions to move into federal law enforcement. i'm also a gun guy and 2a constitutionalist.</td></tr>
+<tr><td>Theme 6: Legal and Ethical Concerns</td><td>Sub-theme 2: Impact on Employment and Benefits</td><td>Can a mental health rating be used against me in any way? Are there any risks?</td><td>1inha31</td><td>title</td><td>Exact normalized title</td><td><span class="highlight">can a mental health rating be used against me in any way? are there any risks?</span></td>
+
+<td>TITLE: <span class="highlight">can a mental health rating be used against me in any way? are there any risks?</span></td></tr>
+</table>
+</div>
+<script>
+let sortDirections = {};
+
+function sortTable(colIndex) {
+    const table = document.getElementById("quoteTable");
+    const rows = Array.from(table.rows).slice(1);
+
+    sortDirections[colIndex] = !sortDirections[colIndex];
+    const ascending = sortDirections[colIndex];
+
+    rows.sort((a, b) => {
+        let aText = a.cells[colIndex].innerText.trim().toLowerCase();
+        let bText = b.cells[colIndex].innerText.trim().toLowerCase();
+
+        let aNum = parseFloat(aText);
+        let bNum = parseFloat(bText);
+
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            return ascending ? aNum - bNum : bNum - aNum;
+        }
+
+        return ascending
+            ? aText.localeCompare(bText)
+            : bText.localeCompare(aText);
+    });
+
+    rows.forEach(row => table.tBodies[0].appendChild(row));
+}
+</script>
+</body>
+</html>
