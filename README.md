@@ -1,6 +1,6 @@
 # Text Analysis Workflows
 
-A collection of independent Python workflows for topic modeling, long-text emotion classification, and LLM-assisted thematic analysis. The repository also includes a standalone HTML report for source-quote review.
+A collection of independent Python workflows for topic modeling, long-text emotion classification, and LLM-assisted thematic analysis. The repository also includes source-quote verification reports and the keyword reference used to identify LMS-related Reddit posts.
 
 Each workflow has its own dependencies and README so it can be installed and run independently.
 
@@ -66,9 +66,20 @@ See the [LATA README](lata-llm-lms-pipeline/LATA_pipeline_clean/README.md) for s
 
 ### Quote Verification Table
 
-File: [`lata-llm-quote-verification.html`](lata-llm-quote-verification.html)
+Files:
 
-A standalone sortable HTML report for reviewing source quotations and their matching source text. Open it directly in a web browser; no server is required.
+- [`lata-llm-quote-verification.md`](lata-llm-quote-verification.md) — GitHub-readable version with matched quote text shown in bold within each excerpt
+- [`lata-llm-quote-verification.html`](lata-llm-quote-verification.html) — sortable browser version with matched quote text highlighted
+
+These reports support review of source quotations and their matching source text.
+
+### LMS Keyword Reference
+
+File: [`LMS Keywords 7.28.26.xlsx`](LMS%20Keywords%207.28.26.xlsx)
+
+This workbook contains the firearm-related and suicide-related keyword terms used to help identify lethal-means-safety (LMS) posts in the Reddit dataset. It preserves the expanded search terms, their original stems where applicable, and the source associated with each term.
+
+The workbook is included as a research reference so the post-identification process can be reviewed and reproduced. The keyword columns should be treated as the search vocabulary used for dataset identification rather than as model-generated labels or final analytical findings.
 
 ## Repository structure
 
@@ -93,8 +104,10 @@ A standalone sortable HTML report for reviewing source quotations and their matc
 |       `-- run_lata.py
 |-- .gitignore
 |-- LICENSE
+|-- LMS Keywords 7.28.26.xlsx
 |-- README.md
-`-- lata-llm-quote-verification.html
+|-- lata-llm-quote-verification.html
+`-- lata-llm-quote-verification.md
 ```
 
 ## General setup
