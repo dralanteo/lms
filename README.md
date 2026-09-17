@@ -66,9 +66,7 @@ See the [LATA README](lata-llm-lms-pipeline/LATA_pipeline_clean/README.md) for s
 
 ### Quote Verification Table
 
-Files:
-
-- [`lata-llm-quote-verification.md`](lata-llm-quote-verification.md) — GitHub-readable version with matched quote text shown in bold within each excerpt
+File:
 - [`lata-llm-quote-verification.html`](lata-llm-quote-verification.html) — sortable browser version with matched quote text highlighted
 
 These reports support review of source quotations and their matching source text.
